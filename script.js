@@ -1,6 +1,6 @@
 alert("JS Connected");
 const addBtn = document.getElementById("addBtn")
-const taskInput = document.getElementById("taskinput")
+const taskInput = document.getElementById("taskInput")
 const taskList = document.getElementById("taskList")
 const totalCount = document.getElementById("totalCount")
 const completedCount = document.getElementById("completedCount")
@@ -13,7 +13,7 @@ taskInput.addEventListener("keypress",(event)=>{
 });
 
 function addTask(){
-    const taskText = taskInput.ariaValueMax.trim();
+    const taskText = taskInput.value.trim();
 
     if(taskText ===""){
         alert("Please enter a task");
@@ -25,7 +25,7 @@ const checkbox = document.createElement("input")
 checkbox.type = "checkbox";
 
 const span = document.createElement("span")
-span.typeContect= " "+taskText+" ";
+span.typeContect= " " + taskText + " ";
 
 const deleteBtn = document.createElement("button");
 deleteBtn.textContect = "Delete"
